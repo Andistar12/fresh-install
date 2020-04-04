@@ -34,15 +34,15 @@ sudo apt update
 echo ""
 echo "Installing terminal programs..."
 
-sudo apt install -y vim tmux git unzip python3-pip pylint htop curl 
+sudo apt install -y --ignore-missing vim tmux git unzip python3-pip pylint htop curl 
 
 case $gui_install in
     Yes ) 
         echo "";
         echo "Installing GUI commands";
-        sudo apt install -y --simulate snapd pavucontrol default-jre gparted gnome-tweak-tool texlive-full steam chrome-gnome-shell evolution python-opencv openvpn; 
+        sudo apt install -y --simulate --ignore-missing snapd pavucontrol default-jre gparted gnome-tweak-tool texlive-full steam chrome-gnome-shell evolution python-opencv openvpn; 
         #sudo snap install --channel=stable vlc audacity gimp inkscape youtube-dl obs-studio discord handbrake-jz google-play-music-desktop-player mp3gain minecraft-launcher-ot ffmpeg;
-        break;;
+        ;;
 esac
 
 echo ""
@@ -64,7 +64,6 @@ echo "Vim and tmux installed and configured"
 echo "Setting up git vars"
 git config --global user.name "$git_username"
 git config --global user.email "$git_email"
-
 
 echo ""
 echo "Finally, upgrade system..."
