@@ -26,6 +26,9 @@ read git_email
 echo ""
 echo "Thank you. You may now sit back"
 
+# Start timer
+start=`date +%s`
+
 echo ""
 echo "Updating package lists..."
 
@@ -71,5 +74,9 @@ echo "Finally, upgrade system..."
 sudo apt upgrade -y
 sudo apt autoremove -y
 
+# End timer
+end=`date +%s`
+runtime=$((end-start))
+
 echo ""
-echo "Installation process finished. A system reboot is recommended if snapd was not preinstalled"
+echo "Installation process finished ($runtime secs). A system reboot is recommended if snapd was not preinstalled"
