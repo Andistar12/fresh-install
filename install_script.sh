@@ -38,6 +38,7 @@ echo ""
 echo "Installing terminal programs..."
 
 sudo apt install -y vim tmux git unzip python3-pip pylint htop curl 
+sudo python3 -m pip install pipenv
 
 case $gui_install in
     Yes ) 
