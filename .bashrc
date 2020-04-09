@@ -84,3 +84,4 @@ scaledw() {
     cd "$currdir"
     sommelier -X --scale=$scale --dpi=160 "$@"
 }
+alias record='curr_date="$(date +%y%m%d_%H%M%S)"; script $curr_date.log --timing=$curr_date.time.log'
