@@ -38,16 +38,15 @@ nnoremap q: <nop>
 nnoremap Q <nop>
 
 " spaces > tabs
-filetype plugin indent on
 set tabstop=4 " show existing tab with 4 spaces width
 set shiftwidth=4 " when indenting with visual >, use 4 spaces width
 set expandtab " on pressing tab, insert 4
 set softtabstop=4 " delete and add 4 spaces when using tab/backspace
 set autoindent 
 " auto tab fixer
-command FixTabs set tabstop=4 | set shiftwidth=4 | set expandtab | retab
+command FixTabs retab | normal gg=G
 
-" vim latex                                                                                                                                                           
+" vim latex
 let g:Tex_MultipleCompileFormats = 'pdf'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:tex_no_error=1
@@ -56,9 +55,9 @@ let g:Tex_FoldedEnvironments = "verbatim,comment,eq,gather,align,figure,table,th
 let g:Tex_UseMakefile=0
 
 " Color & customization
-silent! colo iceberg 
+colo iceberg 
 let g:lightline = {'colorscheme': 'icebergDark',}
-map <C-o> :NERDTreeToggle<CR>
+map <C-o> :NERDTreeToggle<CR> <bar> :normal r<CR>
 
 " Speed find
 set incsearch
