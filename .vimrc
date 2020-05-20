@@ -55,6 +55,7 @@ let g:Tex_FoldedEnvironments = "verbatim,comment,eq,gather,align,figure,table,th
 let g:Tex_UseMakefile=0
 
 " Color & customization
+set background=dark
 colo iceberg 
 let g:lightline = {'colorscheme': 'icebergDark',}
 map <C-o> :NERDTreeToggle<CR> <bar> :normal r<CR>
