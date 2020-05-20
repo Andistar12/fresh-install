@@ -56,7 +56,7 @@ let g:Tex_UseMakefile=0
 
 " Color & customization
 set background=dark
-colo iceberg 
+silent! colo iceberg 
 let g:lightline = {'colorscheme': 'icebergDark',}
 map <C-o> :NERDTreeToggle<CR> <bar> :normal r<CR>
 
