@@ -45,7 +45,7 @@ case $gui_install in
         echo "";
         echo "Installing GUI commands";
         sudo apt install -y snapd pavucontrol default-jre gparted gnome-tweak-tool texlive-full steam chrome-gnome-shell evolution openvpn; 
-        sudo snap install --channel=stable vlc audacity gimp inkscape youtube-dl obs-studio discord handbrake-jz google-play-music-desktop-player mp3gain minecraft-launcher-ot ffmpeg;
+        sudo snap install vlc audacity gimp inkscape youtube-dl obs-studio discord handbrake-jz google-play-music-desktop-player mp3gain minecraft-launcher-ot ffmpeg;
         ;;
 esac
 
