@@ -41,7 +41,7 @@ if [ "$color_prompt" = yes ]; then
         alias egrep='egrep --color=auto'
     fi
  
-    export PS1="\[\033[38;1;251;48;5;239m\] \@ \[\033[48;5;237m\]\w\[\033[0m\]|> "
+    export PS1="\[\033[38;1;251;48;5;239m\] \T \[\033[48;5;237m\]\w\[\033[0m\]|> "
     export LS_COLORS="di=38;5;110:fi=38;5;250:ex=38;5;250:ln=target"
     export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 else
