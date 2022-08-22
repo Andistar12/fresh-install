@@ -84,4 +84,11 @@ scaledw() {
     cd "$currdir"
     sommelier -X --scale=$scale --dpi=160 "$@"
 }
+# Terminal session recording command
 alias record='curr_date="$(date +%y%m%d_%H%M%S)"; script $curr_date.log --timing=$curr_date.time.log'
+# Helpful recursive findtext command
+alias findtext="grep -rlie"
+# For NPM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

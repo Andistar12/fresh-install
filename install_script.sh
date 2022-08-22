@@ -1,22 +1,13 @@
 #!/bin/bash
 
 echo "Setting up computer..."
-
-echo "Will this be a GUI install? GUI also includes multimedia programs. This requires snaps"
-select gui_install in "Yes" "No"; do
-    case $gui_install in
-        Yes ) echo "GUI install selected"; break;;
-        No ) echo "Terminal-only install selected"; break;;
-    esac
-done
-
 echo ""
 echo "Let's first configure your passwd"
 
 sudo passwd # This also elevates the script, assuming it's run as user
 
 echo ""
-echo "Let's configure git really quickly"
+echo "Let's configure git"
 
 echo "Enter preferred user.name var:"
 read git_username
@@ -37,17 +28,8 @@ sudo apt update
 echo ""
 echo "Installing terminal programs..."
 
-sudo apt install -y vim tmux git unzip python3-pip pylint htop curl docker.io docker-compose
+sudo apt install -y vim tmux git unzip python3-pip pylint htop curl docker.io docker-compose neofetch
 sudo python3 -m pip install pipenv
-
-case $gui_install in
-    Yes ) 
-        echo "";
-        echo "Installing GUI commands";
-        sudo apt install -y snapd pavucontrol default-jre gparted gnome-tweak-tool texlive-full steam chrome-gnome-shell evolution openvpn; 
-        sudo snap install vlc audacity gimp inkscape youtube-dl obs-studio discord handbrake-jz google-play-music-desktop-player mp3gain minecraft-launcher-ot ffmpeg;
-        ;;
-esac
 
 echo ""
 echo "Installing vim and tmux configs..."
@@ -80,4 +62,4 @@ end=`date +%s`
 runtime=$((end-start))
 
 echo ""
-echo "Installation process finished ($runtime secs). A system reboot is recommended if snapd was not preinstalled"
+echo "Installation process finished ($runtime secs). A system reboot is recommended"
