@@ -87,7 +87,7 @@ scaledw() {
 # Terminal session recording command
 alias record='curr_date="$(date +%y%m%d_%H%M%S)"; script $curr_date.log --timing=$curr_date.time.log'
 # Helpful recursive findtext command
-alias findtext="grep -rlie"
+alias findtext="grep -irnl . --exclude-dir=node_modules -e"
 # For NPM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
