@@ -6,7 +6,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-obsession'
 Plug 'vim-latex/vim-latex'
-Plug 'christoomey/vim-tmux-navigator'
+Plug 'wincent/terminus'
 call plug#end()
 
 " Remove delay with ESC
